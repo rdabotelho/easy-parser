@@ -2,9 +2,7 @@ package com.m2r.easyparser;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.InputStream;
-import java.io.Reader;
-import java.io.StringWriter;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
@@ -16,7 +14,8 @@ public class FilterTest {
 
 	@Test
 	public void test() throws Exception {
-		InputStream in = getClass().getResourceAsStream("filter.properties");
+		String dir = System.getProperty("user.dir") + "/src/test/java/com/m2r/easyparser";
+		InputStream in = new FileInputStream(dir +"/filter.properties");
 	    byte[] buffer = IOUtils.toByteArray(in);
 	    Reader reader = new CharSequenceReader(new String(buffer, StandardCharsets.ISO_8859_1));
 	    StringWriter writer = new StringWriter();

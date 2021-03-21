@@ -106,7 +106,7 @@ public abstract class Parser<R> {
 		return null;
 	}
 
-	static protected class Token {
+	static public class Token {
 
 		private ITokenType type;
 		private String value;
@@ -143,7 +143,7 @@ public abstract class Parser<R> {
 
 	}
 
-	static protected interface ITokenType {
+	static public interface ITokenType {
 
 		public Pattern getRegex();
 		public String name();

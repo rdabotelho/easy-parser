@@ -15,7 +15,7 @@ Easy Parser is a library to help developers to build parser easily and simply wa
 <dependency>
     <groupId>com.m2r</groupId>
     <artifactId>easy-parser</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 </dependency>
 ```
 

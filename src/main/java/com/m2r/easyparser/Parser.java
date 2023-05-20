@@ -113,6 +113,8 @@ public abstract class Parser<R> {
 		private LineInfo lineInfo;
 		private int pos;
 
+		private int flag = 0;
+
 		public Token(ITokenType type, String value, LineInfo lineInfo, int pos) {
 			this.type = type;
 			this.value = value;
@@ -134,6 +136,15 @@ public abstract class Parser<R> {
 
 		public int getPos() {
 			return pos;
+		}
+
+		public boolean isFlag(int flag) {
+			return this.flag == flag;
+		}
+
+		public boolean flag(int flag) {
+			this.flag = flag;
+			return true;
 		}
 
 		@Override
